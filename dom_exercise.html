@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>JavaScript and the Document Object Model</title>
+</head>
+<body>
+	<p id="demo"></p>
+  <div id="page">
+    <div id="header"><h1 id="title">Page title</h1></div>
+    <div id="content">
+      <h2>Content title</h2>
+      <p>Some copy goes here</p>
+      <p>More copy goes here</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+  	var x = document.getElementById('content').firstChild.nextSibling.innerHTML;
+  	console.log('firstChild-nextSibling:');
+  	console.log(x);
+  	var y = document.getElementById('header').firstChild.innerHTML;
+	console.log('firstChild:');
+	console.log(y);
+	var z = document.getElementById('content').lastChild.previousSibling.innerHTML;
+	console.log('lastChild-previousSibling:');
+	console.log(z);
+	var a = document.getElementById('content').parentNode.nodeName;
+	console.log(a);
+	var b = document.getElementById('content').childNodes;
+	var c = " ";
+	for (var i = 0; i < b.length; i++) {
+		c += b[i].nodeName + "<br>";
+	}
+	console.log(c);
+  </script>
+</body>
+</html>

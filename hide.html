@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>About Me</title>
+	<style type="text/css">
+		#myDiv {
+			border: 1px solid red;
+			height: 70;
+			width: 100px;
+			text-align: center;
+		}
+		.listitem {
+			color: red
+		}
+	</style>
+</head>
+<body>
+	<h1>About Me</h1>
+  
+	<ul>
+		<li>Nickname: <span id="nickname"></span>
+		<li>Favorites:  <span id="favorites"></span>
+		<li>Hometown: <span id="hometown"></span>
+	</ul>
+
+	<button onclick="show()">show</button>
+	<button onclick="hide()">hide</button>
+
+	<div id="myDiv">
+		hi, I am playing with javascript
+	</div>
+
+	<script type="text/javascript">
+	document.body.style.fontFamily = 'Arial, sans-serif';
+	document.getElementById('nickname').innerHTML = "gatu";
+	document.getElementById('favorites').innerHTML = "music";
+	document.getElementById('hometown').innerHTML = "dakor";
+	var list = document.getElementsByTagName('li');
+
+	for (var i = 0; i < list.length; i++) {
+		list[i].className = "listitem";
+	}
+	var myPic = document.createElement('img');
+	myPic.src = 'images.jpg';
+	document.body.appendChild(myPic);
+
+		function show() {
+			document.getElementById("myDiv").style.display = "block";
+		}
+		function hide() {
+			document.getElementById("myDiv").style.display = "none";
+		}
+	</script>
+</body>
+</html>
