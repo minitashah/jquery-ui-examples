@@ -13,23 +13,26 @@
     </div>
   </div>
   <script type="text/javascript">
-  	var x = document.getElementById('content').firstChild.nextSibling.innerHTML;
-  	console.log('firstChild-nextSibling:');
-  	console.log(x);
-  	var y = document.getElementById('header').firstChild.innerHTML;
-	console.log('firstChild:');
-	console.log(y);
-	var z = document.getElementById('content').lastChild.previousSibling.innerHTML;
-	console.log('lastChild-previousSibling:');
-	console.log(z);
-	var a = document.getElementById('content').parentNode.nodeName;
-	console.log(a);
-	var b = document.getElementById('content').childNodes;
-	var c = " ";
-	for (var i = 0; i < b.length; i++) {
-		c += b[i].nodeName + "<br>";
-	}
-	console.log(c);
+ //  	var x = document.getElementById('content').firstChild.nextSibling.innerHTML;
+ //  	console.log('firstChild-nextSibling:');
+ //  	console.log(x);
+ //  	var y = document.getElementById('header').firstChild.innerHTML;
+	// console.log('firstChild:');
+	// console.log(y);
+	// var z = document.getElementById('content').lastChild.previousSibling.innerHTML;
+	// console.log('lastChild-previousSibling:');
+	// console.log(z);
+	// var a = document.getElementById('content').parentNode.nodeName;
+	// console.log(a);
+	// var b = document.getElementById('content').childNodes;
+	// var c = " ";
+	// for (var i = 0; i < b.length; i++) {
+	// 	c += b[i].nodeName + "<br>";
+	// }
+	// console.log(c);
+		document.getElementById('content').firstChild.nextSibling.firstChild.nodeValue = "Hello";
+		document.getElementById('content').firstChild.nextSibling.firstChild.id = "new title";
+		
   </script>
 </body>
 </html>

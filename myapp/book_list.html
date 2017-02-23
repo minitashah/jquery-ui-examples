@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book List</title>
+</head>
+<body>
+	<h1>My Book List</h1>
+	<p id="demo"></p>
+
+	<script type="text/javascript">	
+	var books = [
+		{title: 'The Design of EveryDay Things',
+		author: 'Don Norman',
+		alreadyRead: false
+		},
+		{title: 'The Most Human Human',
+		author: 'Brian Christian',
+		alreadyRead: true
+	}];
+	
+	for (var i = 0; i < books.length; i++) {
+		var book = books[i];
+		var bookInfo = books[i].title + ' by ' + books[i].author;
+		if (book.alreadyRead) {
+			console.log('the book is read ' + bookInfo);
+		} else {
+			console.log('the book still unread ' + bookInfo);
+		}
+	}
+
+	for (var i =0; i < books.length; i++) {
+		var bookp = document.createElement('p');
+		var description = 	document.createTextNode(books[i].title + ' by ' + books[i].author);
+		bookp.appendChild(description);
+		document.body.appendChild(bookp);
+	}
+	var list = document.createElement('ul');
+	for (var i = 0; i <books.length; i++) {
+		var item = document.createElement('li');
+		var desc = document.createTextNode(books[i].title + ' by ' + books[i].author);
+		item.appendChild(desc);
+		list.appendChild(item);
+		document.body.appendChild(list);
+		document.geter\
+	}
+	// new object
+	var recipe = {
+		title: 'fev food',
+		servings: 23,
+		ingredients: ['italian', 'maxican', 'south indian', 'gujrati'],
+	};
+	console.log(recipe.title);
+	console.log(recipe.servings);
+	console.log('ingredients:')
+	for (var i = 0; i < recipe.ingredients.length; i++) {
+		console.log(recipe.ingredients[i]) + '<br>';
+	}
+
+	var movie = {
+		title: 'beauty and the beast',
+		duration: '2 hours',
+		stars: ['Emma Waston', 'Dan Stevens', 'Luke Evans']
+	}
+	console.log(movie.title + ' for ' + movie.duration);
+	console.log('stars:');
+	for (var i = 0; i < movie.stars.length; i++) {
+		console.log(movie.stars[i]);
+	}
+	</script>
+</body>
+</html>
